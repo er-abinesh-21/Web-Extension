@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8"
+<head>
+  <title>SiteSentry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+
+
+    <header>
+
+      <div class="title"> <img src="https://img.icons8.com/?size=48&id=FUZiNN6aw2Rb&format=png&color=000000"/> <h1 class="site">Site</h1> <h1 class="sentry">Sentry</h1> </div>
+
+
+      <div class="tabs">
+
+        <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+        
+        <button class="tab-btn" data-tab="blocklist">Block List</button>
+        
+        <button class="tab-btn" data-tab="reports">Reports</button>
+      
+      </div>
+
+
+    </header>
+
+
+
+    <main>
+
+      <section id="dashboard" class="tab-content active">
+
+        <div class="today-stats">
+
+          <h2 class="activity">Today's Activity</h2>
+
+
+
+          <div class="stat-grid">
+
+            <div class="stat-card">
+
+              <h3>Productive Time</h3>
+
+              <p id="productive-time">0h 0m</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+              <h3>Distracting Time</h3>
+
+              <p id="distracting-time">0h 0m</p>
+
+            </div>
+            
+          </div>
+
+
+
+          <div id="current-site"></div>
+
+        </div>
+
+      </section>
+
+
+      <section id="blocklist" class="tab-content">
+
+        <h2>Blocked Sites</h2>
+
+
+        <div class="add-site">
+
+          <input type="text" id="new-site" placeholder="Enter website URL">
+
+          <button id="add-site">Add Site</button>
+
+        </div>
+
+
+        <ul id="blocked-sites"></ul>
+
+      </section>
+
+
+      <section id="reports" class="tab-content">
+
+        <h2>Productivity Report</h2>
+
+
+        <div class="date-selector">
+
+          <button id="prev-day">←</button>
+
+          <span id="selected-date"></span>
+
+          <button id="next-day">→</button>
+
+        </div>
+
+
+        <div id="daily-chart"></div>
+
+        <div id="site-breakdown"></div>
+
+      </section>
+
+
+    </main>
+
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
